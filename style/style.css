@@ -1,0 +1,1351 @@
+@font-face
+{
+    font-family:'Architects Daughter';
+    src:url('../fonts/ArchitectsDaughter-Regular.ttf') format('truetype');
+    font-weight:normal;
+    font-style:normal;
+}
+
+@font-face
+{
+    font-family:'Sansation Light';
+    src:url('../fonts/Sansation_Light.ttf') format('truetype');
+    font-weight:normal;
+    font-style:normal;
+}
+
+@font-face
+{
+    font-family:'Sansation Bold';
+    src:url('../fonts/Sansation_Bold.ttf') format('truetype');
+    font-weight:normal;
+    font-style:normal;
+}
+
+@font-face
+{
+    font-family:'Montserrat SemiBold';
+    src:url('../fonts/montserrat/Montserrat-SemiBold.ttf') format('truetype');
+    font-weight:normal;
+    font-style:normal;
+}
+
+@font-face
+{
+    font-family:'Montserrat Bold';
+    src:url('../fonts/montserrat/Montserrat-Bold.ttf') format('truetype');
+    font-weight:normal;
+    font-style:normal;
+}
+
+
+*
+{
+    margin:0;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+.transp
+{
+    position:absolute;
+    background:rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
+}
+
+.new_ep
+{
+    display:flex;
+    /* background:url(../images/sunset-7680x4320-forest-minimal-4k-8k-5165.jpg); */
+    background:url(../images/bg1.jpg);
+    background-size: cover; 
+    height:100%;
+    /* justify-content: center; */
+}
+
+.new_ep_wrap
+{
+    display:flex;
+    flex-direction: column;
+    height:100%;
+}
+
+.main_text_wrap
+{
+    padding:150px;
+    z-index:2;
+}
+
+.out_now
+{
+    font-family:'Montserrat Bold';
+    color:white;
+    font-size: 72pt;
+    text-align:left;
+    z-index:2;
+}
+
+.out_now_2
+{
+    font-family:'Sansation Light';
+    /* display:flex; */
+    color:white;
+    font-size: 26pt;
+    max-width:850px;
+    padding-top:30px;
+}
+
+.buy_now
+{
+    font-family:'Sansation Bold';
+    color:white;
+    margin-top:100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size:26pt;
+    cursor:pointer;
+    width:fit-content;
+    width:-moz-fit-content;
+    width:-o-fit-content;
+    width:-ms-fit-content;
+}
+
+.arrow 
+{
+    padding-left: 15px;
+    transition:0.5s;
+}
+
+.arrowTop
+{
+    position: absolute;
+    top:-70px;
+    cursor: pointer;
+}
+
+.arrowBot
+{
+    position: absolute;
+    transform:rotate(180deg);
+    bottom:-70px;
+    cursor: pointer;
+}
+
+
+.slick-arrow
+{
+    margin-top:50px;
+    margin-bottom:50px;
+    cursor: pointer;
+}
+
+.appleWid
+{
+    width:1000px;
+    height:700px;
+    align-self:center;
+}
+
+.appleHolder
+{
+    align-self:center;
+    position: absolute;
+    transition: 1s;
+}
+
+.spotifyHolder
+{
+    align-self:center;
+    display:flex;
+    flex-direction: column;
+    position: absolute;
+    transition: 1s;
+}
+
+.amazonHolder
+{
+    position: absolute;
+    align-self:center;
+    transition: 1s;
+}
+
+.deezerHolder
+{
+    position: absolute;
+    align-self:center;
+    transition: 1s;
+}
+
+.spotifyList
+{
+    margin-top:20px;
+}
+
+.buy_now:hover
+{
+
+}
+
+.scroll
+{
+    position: absolute;
+    right:50%;
+    bottom:0;
+    align-self:flex-end;
+    margin-bottom:50px;
+    z-index:2;
+    transition:1s;
+}
+
+.sourceWrap
+{
+    display:flex;
+    position: relative;
+    align-self:center;
+    justify-content: center;
+    text-align:center;
+    height:100%;
+    width:100%;
+    overflow: hidden;
+}
+
+.sourceWrapUnder
+{
+    visibility:hidden;
+    opacity:0;
+    transition:1s;
+    transition-delay: 1s;
+    display: flex;
+    justify-content: center;
+}
+
+.sources
+{
+    font-family: Montserrat Bold;
+    font-size:112pt;
+    align-self:center;
+    justify-content: center;
+    text-align:center;
+    /* position: absolute; */
+    overflow: hidden;
+    transition:1s;
+}
+
+.sources>*
+{
+    cursor:pointer;
+    width:auto;
+}
+
+.burger
+{
+    position:fixed;
+    top:50px;
+    right:75px;
+    width:60px;
+    height:60px;    
+    z-index:9;
+}
+
+.rectangles
+{
+    fill:white;
+}
+
+.rectangles:hover
+{
+    cursor:pointer;
+}
+
+.menu
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:fixed;
+    margin:0;
+    padding:0;
+    height:100%;
+    width:100%;
+    background:#13b2f1;
+    z-index:8;
+    transition:1s;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.menuLine
+{
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    align-items: center;
+    font-family: Montserrat SemiBold;
+    color: white;
+    justify-content: center;
+    font-size: 45pt;
+    padding: 0;
+    /* width: 100%;  */
+}
+
+.menuItem
+{
+    cursor:pointer;
+    margin:20px;
+    transition:1s;
+}
+
+.authorWrap
+{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    overflow:hidden;
+    width:50%;
+}
+
+.authorWrap>a
+{
+    display:flex;
+    justify-content: center;
+}
+
+
+.authorName
+{
+align-self:center;
+color:white;
+text-align:center;
+font-family:Montserrat SemiBold;
+font-size:80pt;
+position: absolute;
+}
+
+.bioInfoWrap
+{
+    align-self:center;
+    margin:100px;
+    display:flex;
+    align-items: center;
+    position: relative;
+}
+
+.bioInfoTextWrap
+{
+    display:flex;
+    flex-direction: column;
+    max-width:800px;
+}
+
+.bioInfoText
+{
+    font-family:Sansation Light;
+    font-size:22pt;
+    text-indent: 1.5em;
+}
+
+.authorsImg
+{
+    align-self:center;
+    max-width:500px;
+    margin:50px;
+}
+
+.authorsImg>img
+{
+    max-width:100%;
+}
+
+.bioAbout
+{
+    font-family: Montserrat SemiBold;
+    font-size:34pt;
+    /* position: absolute; */
+    /* top:0px; */
+    border-bottom: 0.05em solid #2597FF;
+    padding-bottom: 5px;
+    width:fit-content;
+    margin-bottom:10px;
+}
+
+.bioSocialsWrap
+{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.bioAbout
+{
+    margin-bottom:50px;
+}
+
+.bioSocials
+{
+    display:flex;
+}
+
+.bioLink
+{
+    margin:20px;
+    max-width:75px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.bioLink>img
+{
+    max-width:100%;
+    transition:0.5s;
+}
+
+.bioLink>img:hover
+{
+    transform: scale(1.2);
+}
+
+.toursWrapper
+{
+    display:flex;
+    flex-direction: column;
+    align-self:center;
+    width: 90%;
+    max-width: 1280px;
+}
+
+.tourWrap
+{
+    display:flex;
+    border-bottom:1px solid black;
+    padding: 10px;
+    align-items: center;
+    font-family: Montserrat Semibold;
+    font-size:25pt;
+    transition:1s;
+}
+
+.tourWrap:hover
+{
+    background:black;
+    color:white;
+    border-bottom:1px solid white;
+}
+
+.tourDate
+{
+    padding:5px;
+    display:flex;
+    width:20%;
+}
+
+.tourPlaces
+{
+    padding:5px;
+    display:flex;
+    flex-direction: column;
+    width:30%;
+}
+
+.tourPlace1
+{
+}
+
+.tourPlace2
+{
+    font-size:16pt;
+}
+
+.tourArtist
+{
+    padding:5px;
+    display:flex;
+    font-family:Sansation Light;
+    width:25%;
+    justify-content: center;
+}
+
+.tourButtonWrap
+{
+    padding:5px;
+    display:flex;
+    width:25%;
+    justify-content: flex-end;
+}
+
+.tourButton
+{
+    padding:10px 25px;
+    background:#13b2f1;
+    color:white;
+    transition:0.5s;
+}
+
+.tourButton:hover
+{
+    transform: scale(1.2);
+}
+
+.juliPhoto
+{
+    transition:1s;
+    min-width:100%;
+    min-height: 100%;
+}
+
+.edPhoto
+{
+    transition:1s;
+    min-width:100%;
+    min-height: 100%;
+}
+
+.juliPhoto1200, .edPhoto1200
+{
+    display:none;
+    transition:1s;
+    min-width:100%;
+    min-height: 100%;
+}
+
+
+.albumSection
+{
+    height:100%;
+    display:flex;
+    justify-content: center;
+}
+
+
+.sectionHeader
+{
+    text-align:center;
+    font-family:'Sansation Light';
+    font-size:36pt;
+    position:absolute;
+    padding-top:75px;
+    transition:1s;
+}
+
+.sectionHeader:first-letter
+{
+    background:#B5FFB3;
+    padding-left:15px;
+}
+
+.authorsSection
+{
+    height:100%;
+    display:flex;    
+    justify-content: center;
+    align-content:center;
+}
+
+.authorsSection2
+{
+    height:100%;
+    display:flex;
+    justify-content: center;
+    align-content:center;
+}
+
+.toursSection
+{
+    height:100%;
+    display:flex;
+    justify-content: center;
+    position: relative;
+    align-content:center;
+    background:none;
+    /* opacity:0; */
+    transition:1s;
+    overflow:hidden;
+}
+
+.tourBack
+{
+    position: absolute;
+    z-index:-1;
+    transition:1s;
+    opacity:0;
+    min-width:100%;
+    /* min-height:100%; */
+}
+
+
+/*       CD        */
+
+.cd
+{
+    display:flex;
+    height:100%;
+    background-image:linear-gradient(to bottom, #CCCBC6, rgba(204, 203, 198,0));
+}
+
+.cdhalf1
+{
+    display:flex;
+    flex-direction: column;
+    width:50%;
+    margin:75px 145px;
+    color:#333;
+}
+
+.cdhalf2
+{
+    display:flex;
+    width:50%;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.cdhalf2 img
+{
+    box-shadow: 0px 5px 20px rgba(0,0,0,0.5);
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.cdHeader
+{
+    font-family: Montserrat Bold;
+    font-size:112pt;
+    text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    height: 30%;
+}
+
+.descripWrap
+{
+    display:flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.cdDescription
+{
+    font-family:Sansation Light;
+    font-size:18pt;
+}
+
+
+
+/* General styles */
+
+.nav {
+	position: relative;
+	width: 8em;
+	margin: 0 0 0 3em;
+}
+
+.nav__item {
+	line-height: 1;
+	position: relative;
+	display: block;
+	margin: 0;
+	padding: 0;
+	letter-spacing: 0;
+	color: currentColor;
+	border: 0;
+	background: none;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.nav__item:focus {
+	outline: none;
+}
+
+/* Individual styles */
+
+/*** Meklit ***/
+
+.nav--meklit {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+	-webkit-align-content: stretch;
+	align-content: stretch;
+	height: 100%;
+	margin: 0;
+}
+
+.nav--meklit .nav__item {
+	-webkit-flex: 1;
+	flex: 1;
+	width: 6em;
+	height: 1.5em;
+}
+
+.nav--meklit .nav__item::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0.5	;
+	background: #141417;
+	-webkit-transform: scale3d(0.2,1,1);
+	transform: scale3d(0.2,1,1);
+	-webkit-transform-origin: 0% 50%;
+	transform-origin: 0% 50%;
+	-webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+	transition: transform 0.5s, opacity 0.5s;
+	-webkit-transition-timing-function: cubic-bezier(0.2,1,0.3,1);
+	transition-timing-function: cubic-bezier(0.2,1,0.3,1);
+}
+
+.nav--meklit .nav__item:nth-child(odd)::before {
+	background: #0a0a0c;
+}
+
+.nav--meklit .nav__item:not(.nav__item--current):focus::before,
+.nav--meklit .nav__item:not(.nav__item--current):hover::before {
+	opacity: 1;
+	-webkit-transform: scale3d(0.35,1,1);
+	transform: scale3d(0.35,1,1);
+}
+
+.nav--meklit .nav__item--current::before {
+	opacity: 1;
+	-webkit-transform: scale3d(1,1,1);
+	transform: scale3d(1,1,1);
+}
+
+.nav--meklit .nav__item-title {
+	font-size: 1.25em;
+	color:white;
+	font-weight: bold;
+	display: block;
+	overflow: hidden;
+	text-align: center;
+	white-space: nowrap;
+	pointer-events: none;
+}
+
+.nav--meklit .nav__item-title span {
+	display: block;
+	-webkit-transform: translate3d(0,100%,0);
+	transform: translate3d(0,100%,0);
+	-webkit-transition: -webkit-transform 0.5s;
+	transition: transform 0.5s;
+	-webkit-transition-timing-function: cubic-bezier(0.2,1,0.3,1);
+	transition-timing-function: cubic-bezier(0.2,1,0.3,1);
+}
+
+.nav--meklit .nav__item--current .nav__item-title span {
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+
+@media screen and (max-width: 1024px) 
+{ 
+    .buy_now 
+    {
+        margin-top: 50px;
+        font-size:20pt;
+        width:auto;
+    }
+    .new_ep 
+    {
+        justify-content: center;
+    }
+    .main_text_wrap
+    {
+        align-self: center;
+        padding:20px;
+    }
+    .out_now
+    {
+        text-align: center;
+        font-size:62pt;
+    }
+    .out_now_2
+    {
+        text-align: center;
+        font-size: 20pt;
+    }
+
+    .scroll
+    {
+        display:none;
+    }
+
+    .juliPhoto, .edPhoto
+    {
+        display:block;
+    }
+
+    .juliPhoto1200, .edPhoto1200
+    {
+        display:none;
+    }
+
+}
+
+@media screen and (max-width: 1290px) and (max-height:730px)
+{ 
+    .buy_now 
+    {
+        margin-top: 50px;
+        font-size:20pt;
+        width:auto;
+    }
+    .new_ep 
+    {
+        justify-content: center;
+    }
+    .main_text_wrap
+    {
+        align-self: center;
+        padding:20px;
+    }
+    .out_now
+    {
+        text-align: center;
+        font-size:62pt;
+    }
+    .out_now_2
+    {
+        text-align: center;
+        font-size: 20pt;
+    }
+    .scroll
+    {
+        display:none;
+    }
+    .sources
+    {
+        font-size:72pt;
+    }
+    .slick-arrow 
+    {
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+
+    .nav--meklit .nav__item
+    {
+        width: 4em;
+    }
+
+    .appleWid 
+    {
+        width: 700px;
+        height: 350px;
+    }
+
+    .spotifyArtist
+    {
+        width:250px;
+    }
+
+    .spotifyList
+    {
+        width:250px;
+        height:300px;
+    }
+
+    .amazonWid
+    {
+        height:350px;
+    }
+
+    .deezerWid
+    {
+        width:500px;
+    }
+
+    .sectionHeader
+    {
+        padding-top:10px;
+    }
+
+    .tourWrap
+    {
+        font-size:16pt;
+    }
+
+    .tourPlace2
+    {
+        font-size:11pt;
+    }
+
+    .tourButton
+    {
+        padding: 5px 15px;
+    }
+
+    .bioInfoText
+    {
+        font-size:16pt;
+    }
+
+    .bioAbout 
+    {
+        margin-bottom: 30px;
+        font-size:28pt;
+    }
+
+    .bioLink
+    {
+        max-width: 55px;
+    }
+
+    .burger
+    {
+        top: 30px;
+        right: 45px;
+    }
+
+    .juliPhoto, .edPhoto
+    {
+        display:none;
+    }
+
+    .juliPhoto1200, .edPhoto1200
+    {
+        display:block;
+    }
+}
+
+@media screen and (max-width: 1605px) and (max-height:900px)
+{
+    .main_text_wrap
+    {
+        padding:100px;
+    }
+}
+
+
+@media screen and (max-width: 1200px)
+{
+    .buy_now 
+    {
+        margin-top: 50px;
+        font-size:20pt;
+        width:auto;
+    }
+    .new_ep 
+    {
+        justify-content: center;
+    }
+    .main_text_wrap
+    {
+        align-self: center;
+        padding:20px;
+    }
+    .out_now
+    {
+        text-align: center;
+        font-size:62pt;
+    }
+    .out_now_2
+    {
+        text-align: center;
+        font-size: 20pt;
+    }
+
+    .sources
+    {
+        font-size:80pt;
+    }
+    .slick-arrow 
+    {
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+
+    .nav--meklit .nav__item
+    {
+        width: 4em;
+    }
+
+    .appleWid 
+    {
+        width: 700px;
+        height: 350px;
+    }
+
+    .spotifyArtist
+    {
+        width:250px;
+    }
+
+    .spotifyList
+    {
+        width:250px;
+        height:300px;
+    }
+
+    .amazonWid
+    {
+        height:350px;
+    }
+
+    .deezerWid
+    {
+        width:500px;
+    }
+
+    .sectionHeader
+    {
+        padding-top:20px;
+    }
+
+    .tourWrap
+    {
+        font-size:16pt;
+    }
+
+    .tourPlace2
+    {
+        font-size:11pt;
+    }
+
+    .tourButton
+    {
+        padding: 5px 15px;
+    }
+
+    .bioInfoText
+    {
+        font-size:18pt;
+    }
+
+    .bioAbout 
+    {
+        margin-bottom: 30px;
+        font-size:30pt;
+    }
+
+    .bioLink
+    {
+        max-width: 55px;
+    }
+
+    .burger
+    {
+        top: 30px;
+        right: 45px;
+    }
+
+    .authorName
+    {
+        font-size:70pt;
+    }
+
+    /*      CD       */
+
+    .cd
+    {
+        position: relative;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cdhalf1
+    {
+        margin: 45px;
+        margin-bottom: 20px;
+        align-items: center;
+        width:auto;
+    }
+
+    .cdhalf2 img
+    {
+        width: auto;
+    }
+
+    .cdDescription
+    {
+        font-size:14pt;
+    }
+
+    .campLink
+    {
+        outline: none;
+        position: absolute;
+        left: 50%;
+        margin-left: -221px;
+        bottom: 0;
+    }
+
+    .descripWrap
+    {
+        display:none;
+    }
+
+    .cdHeader
+    {
+        height:auto;
+    }
+}
+
+@media screen and (max-width: 700px)
+{
+    /* 1section */
+
+    .arrow
+    {
+        width:60px;
+        height:1em;
+    }
+
+    .out_now
+    {
+        font-size: 52pt;
+    }
+
+    .out_now_2 
+    {
+        font-size: 16pt;
+    }
+
+    .buy_now 
+    {
+        font-size: 16pt;
+    }
+
+    /* 2section */
+
+    .sources 
+    {
+        font-size: 50pt;
+    }
+
+    .appleWid 
+    {
+        width: 400px;
+        height: 350px;
+    }
+
+    .deezerWid 
+    {
+        width: 400px;
+    }
+
+    /* 3section */
+
+    .authorName 
+    {
+        font-size: 45pt;
+    }
+
+    /* 4section */
+
+    .tourWrap 
+    {
+        font-size: 12pt;
+    }
+
+    .tourPlace2 
+    {
+        font-size: 7pt;
+    }
+
+    .sectionHeader
+    {
+        font-size:26pt;
+    }
+
+    /* Authors */
+
+    .bioInfoTextWrap
+    {
+        align-items:center;
+        order:1;
+    }
+
+    body
+    {
+        overflow-y: visible;
+        overflow-x: hidden;
+    }
+
+    .authorsImg
+    {
+        margin: 20px 0px;
+        max-width:350px;
+    }
+
+    .bioInfoWrap
+    {
+        justify-content: center;
+        flex-direction: column;
+        margin: 75px;
+    }
+
+    .authorsSection2
+    {
+        height:auto;
+    }
+
+/* After */
+
+    .tourWrap
+    {
+        padding:5px;
+        font-size: 10pt;
+    }
+
+    .tourPlace2 
+    {
+        font-size: 5pt;
+    }
+
+}
+
+
+@media screen and (max-device-width: 400px)
+{
+    .bioInfoWrap 
+    {
+        justify-content: center;
+        flex-direction: column;
+        margin: 75px;
+    }
+
+    .authorsSection2 
+    {
+        height: auto;
+    }
+
+    .bioInfoTextWrap 
+    {
+        align-items: center;
+        order: 1;
+    }
+
+    .bioInfoText 
+    {
+	font-size: 26pt;
+    }
+
+    .authorsSection
+    {
+        flex-direction: column;
+        align-items:center;
+    }
+
+    .authorWrap
+    {
+        width:80%;
+        margin:50px;
+	    align-items:initial;
+    }
+
+    .tourBack
+    {
+	min-height:100%;
+    }
+
+    /*      Late         */
+
+
+	.toursSection
+	{
+		flex-direction:column;
+		justify-content:flex-start;
+	}
+	
+	
+	.tourWrap
+	{
+		flex-direction: column;
+		font-size:25pt;
+		margin-bottom: 20px;
+	}
+	
+	.tourPlace2
+	{
+		font-size:16pt;
+	}
+	
+	.tourDate, .tourPlaces, .tourButtonWrap
+	{
+		width:auto;
+	}
+	
+	.sectionHeader
+	{
+		position:relative;
+	}
+	
+	.toursWrapper
+	{
+		margin:auto;
+		width:50%;
+		max-width: 80%;
+	}
+	
+	.tourArtist
+	{
+	    width:auto;
+	}
+	
+	.amazonHolder, .spotifyHolder, .appleHolder, .deezerHolder
+	{
+		transform: scale(1.5);
+	}
+	
+	.appleWid 
+    {
+        width: 400px;
+        height: 350px;
+    }
+	
+	.deezerWid
+	{
+        width: 400px;
+    }
+
+    /*      CD       */
+
+    .descripWrap
+    {
+        display:none;
+    }
+
+    .cd
+    {
+        height: 50%;
+    }
+}
+
+
+@media screen and (max-width: 400px)
+{
+    .tourWrap
+	{
+		font-size:25pt;
+		margin-bottom: 20px;
+	}
+	
+	.tourPlace2
+	{
+		font-size:16pt;
+	}
+	
+}
+
+
+@media screen and (min-width: 700px)
+{
+    body
+    {
+        overflow-y: visible;
+        overflow-x: hidden;
+    }
+}
