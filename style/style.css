@@ -47,6 +47,7 @@
 a
 {
     text-decoration: none;
+    outline:none;
 }
 
 .transp
@@ -604,6 +605,13 @@ position: absolute;
     justify-content: center;
     align-items: center;
     margin: 10px;
+   transition:1s;
+}
+
+.cdhalf2:hover
+{
+    transform:scale(1.1);
+    transition:1s;
 }
 
 .cdhalf2 img
@@ -1071,15 +1079,6 @@ position: absolute;
     .cdDescription
     {
         font-size:14pt;
-    }
-
-    .campLink
-    {
-        outline: none;
-        position: absolute;
-        left: 50%;
-        margin-left: -221px;
-        bottom: 0;
     }
 
     .descripWrap
