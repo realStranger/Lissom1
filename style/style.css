@@ -1325,6 +1325,21 @@ position: absolute;
 }
 
 
+@media screen and (max-device-height: 550px)
+	
+	{
+		.cd
+		{
+			height:auto;
+		}
+		
+		.campLink
+		{
+			bottom:-20%;
+		}
+	}
+
+
 @media screen and (max-width: 400px)
 {
     .tourWrap
